@@ -234,20 +234,59 @@ body.dragging-on{user-select:none;-webkit-user-select:none;cursor:grabbing}
   .h2row h2{font-size:18px}
   .dtab{padding:6px 10px}.dtab b{font-size:15px}
 }
+
+.exsum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ex{padding:8px 10px;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.ex1{display:grid;grid-template-columns:minmax(0,1fr) 110px 84px 30px;gap:6px;align-items:center}
+.ex input.amt{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.ex2{display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding-left:2px}
+.ex2 select.cat{width:auto;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.lbl2{font-size:11px;color:var(--muted);margin-left:4px}
+.pc{font:inherit;font-size:12px;font-weight:600;border:1px dashed var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:3px 10px;cursor:pointer;text-decoration:line-through}
+.pc.on{border:1px solid transparent;text-decoration:none}
+.each{font-size:12px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+.tr{display:grid;grid-template-columns:28px auto 18px auto minmax(0,1fr) 36px;gap:8px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.tr b{text-align:right;font-size:18px;font-variant-numeric:tabular-nums}
+.tr .arr{color:var(--muted);text-align:center}
+.tr .st{font-size:11px;color:var(--accent)}
+.tr.done b{text-decoration:line-through;color:var(--muted)}
+.tag{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;display:inline-block;text-align:center}
+.empty.warn{color:var(--danger)}
+.pp{display:grid;grid-template-columns:64px repeat(3,minmax(0,1fr));gap:6px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;font-size:14px}
+.pp>span:not(.tag){text-align:right}
+.pp.head{font-size:11px;color:var(--muted);padding-block:6px 4px}
+.pp small{display:block;font-size:10px;color:var(--muted);font-weight:400}
+.pos{color:var(--accent);font-weight:600}.neg{color:var(--danger);font-weight:600}
+.bars{display:grid;gap:8px;padding:12px}
+.brow{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px;align-items:center;font-size:13px}
+.brow.c{grid-template-columns:52px minmax(0,1fr) auto}
+.brow em{font-style:normal;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.btrack{height:12px;background:var(--bg);border-radius:6px;overflow:hidden}
+.btrack i{display:block;height:100%;border-radius:6px;background:var(--accent);min-width:2px}
+@media (max-width:600px){
+  .ex1{grid-template-columns:minmax(0,1fr) 92px 66px 24px;gap:4px}
+  .ex1 select.who{font-size:16px;padding:4px 2px}
+  .tr{grid-template-columns:26px auto 14px auto minmax(0,1fr) 28px;gap:5px;padding:10px}
+  .tr b{font-size:16px}
+  .pp{grid-template-columns:52px repeat(3,minmax(0,1fr));font-size:13px;padding:8px}
+  .tab span{font-size:11px}
+}
+.pc.on.p1,.btrack i.p1{background:var(--c1);color:var(--c1f)}.pc.on.p2,.btrack i.p2{background:var(--c2);color:var(--c2f)}.pc.on.p3,.btrack i.p3{background:var(--c3);color:var(--c3f)}.pc.on.p4,.btrack i.p4{background:var(--c4);color:var(--c4f)}
+.btrack i.p1{background:var(--c1f)}.btrack i.p2{background:var(--c2f)}.btrack i.p3{background:var(--c3f)}.btrack i.p4{background:var(--c4f)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style><link id="fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&amp;family=IBM+Plex+Sans+KR:wght@400;500;600&amp;display=swap"><div id="app"></div><script type="application/json" id="state">{"title": "1박 2일 청춘여행", "sub": "10.17 (토) – 10.18 (일) · 4인", "days": [{"label": "1일차", "date": "10/17 (토)", "items": [{"t": "10:00", "w": "건우집 집합", "p": "", "m": ""}, {"t": "", "w": "장보기", "p": "", "m": ""}, {"t": "14:00", "w": "숙소 입실", "p": "", "m": ""}, {"t": "", "w": "", "p": "", "m": ""}, {"t": "", "w": "", "p": "", "m": ""}]}, {"label": "2일차", "date": "10/18 (일)", "items": []}], "games": [{"n": "손바닥 고무줄", "d": false, "p": ""}, {"n": "윷놀이", "d": false, "p": ""}, {"n": "젠가", "d": false, "p": ""}, {"n": "카메라 숨바꼭질", "d": false, "p": ""}], "menu": [{"n": "돼지고기", "p": ""}, {"n": "꽃게마요구이", "p": ""}, {"n": "", "p": "소연"}, {"n": "", "p": "나희"}], "tours": [{"n": "화담숲", "d": "곤지암 리조트 안 수목원. 10월 중순이면 단풍 시작 무렵이라 산책 코스로 좋고, 모노레일도 있어요.", "tags": ["단풍 산책", "모노레일", "예약 필수"], "u": "https://map.naver.com/p/search/%ED%99%94%EB%8B%B4%EC%88%B2", "v": 0, "pk": false}, {"n": "남한산성", "d": "유네스코 세계유산 성곽 둘레길 트레킹. 내려와서 근처 백숙집에서 점심까지 한 번에 해결 가능.", "tags": ["트레킹", "역사", "점심 코스"], "u": "https://map.naver.com/p/search/%EB%82%A8%ED%95%9C%EC%82%B0%EC%84%B1", "v": 0, "pk": false}, {"n": "율봄식물원", "d": "약 1만 평 야외 식물원. 걷는 양이 적고 사진 찍기 좋은 가벼운 코스.", "tags": ["가벼운 산책", "사진", "힐링"], "u": "https://map.naver.com/p/search/%EC%9C%A8%EB%B4%84%EC%8B%9D%EB%AC%BC%EC%9B%90", "v": 0, "pk": false}, {"n": "", "d": "", "tags": "", "u": "", "v": 0, "pk": false}], "recipes": [{"n": "삼겹살·목살 그릴 구이", "p": "", "srv": "4인 · 30분", "ing": "삼겹살 1kg, 목살 600g\n통마늘 1줌, 새송이·양파\n쌈채소(상추·깻잎), 쌈장·기름장\n파절이(대파+고춧가루·식초·설탕·참기름)", "st": "1. 고기는 굽기 30분 전 냉장고에서 꺼내두기\n2. 숯/그릴 충분히 달군 뒤 목살 먼저, 삼겹살은 나중에\n3. 한 면에서 육즙 올라오면 한 번만 뒤집기\n4. 기름 나오면 마늘·버섯·양파 같이 굽기\n5. 파절이는 먹기 직전에 무치기", "tip": "목살은 두껍게(2cm) 사야 숯불에서 안 질겨요."}, {"n": "꽃게마요구이", "p": "", "srv": "4인 · 25분", "ing": "손질 꽃게 4마리\n마요네즈 6큰술, 체다/모짜렐라 치즈 1컵\n다진마늘 1큰술, 설탕 1큰술, 쯔유 1큰술\n쪽파, 날치알(선택)", "st": "1. 꽃게 반 갈라 집게발 두드려 금 내기\n2. 마요+마늘+설탕+쯔유 섞어 소스 만들기\n3. 게딱지·단면에 소스 듬뿍 바르고 치즈 올리기\n4. 그릴 뚜껑 덮고(또는 에어프라이어 200℃) 12~15분\n5. 쪽파·날치알 뿌려 마무리", "tip": "냉동 손질 꽃게면 전날 냉장 해동. 은박 접시 위에 구우면 소스가 안 흘러요."}, {"n": "둘째 날 아침 해장라면", "p": "", "srv": "4인 · 15분", "ing": "라면 4~5봉\n남은 고기·대파, 계란 4개\n콩나물 1봉, 청양고추 1개", "st": "1. 물 끓으면 콩나물 먼저 3분\n2. 라면·스프·남은 고기 넣기\n3. 1분 남기고 계란·대파·청양고추\n4. 뚜껑 덮고 30초 뜸", "tip": "남은 꽃게 있으면 넣어서 꽃게라면으로."}], "shop": [{"c": "고기·해산물", "n": "삼겹살", "q": "1kg", "p": "", "d": false}, {"c": "고기·해산물", "n": "목살 (두껍게)", "q": "600g", "p": "", "d": false}, {"c": "고기·해산물", "n": "손질 꽃게", "q": "4마리", "p": "", "d": false}, {"c": "채소·쌈", "n": "상추·깻잎", "q": "각 1봉", "p": "", "d": false}, {"c": "채소·쌈", "n": "대파", "q": "1단", "p": "", "d": false}, {"c": "채소·쌈", "n": "통마늘·새송이·양파", "q": "적당히", "p": "", "d": false}, {"c": "채소·쌈", "n": "쪽파·청양고추", "q": "조금", "p": "", "d": false}, {"c": "채소·쌈", "n": "콩나물", "q": "1봉", "p": "", "d": false}, {"c": "양념·소스", "n": "쌈장·소금·참기름", "q": "", "p": "", "d": false}, {"c": "양념·소스", "n": "마요네즈", "q": "1통", "p": "", "d": false}, {"c": "양념·소스", "n": "모짜렐라/체다 치즈", "q": "1봉", "p": "", "d": false}, {"c": "양념·소스", "n": "쯔유·다진마늘·설탕", "q": "소량", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "소주·맥주", "q": "취향껏", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "탄산음료·생수", "q": "2L×4", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "과자·안주", "q": "", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "얼음", "q": "1봉", "p": "", "d": false}, {"c": "아침거리", "n": "라면", "q": "5봉", "p": "", "d": false}, {"c": "아침거리", "n": "계란", "q": "10구", "p": "", "d": false}, {"c": "아침거리", "n": "햇반", "q": "4개", "p": "", "d": false}, {"c": "생활용품", "n": "숯·토치·착화제", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "호일·은박접시·집게·가위", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "종이컵·접시·나무젓가락", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "물티슈·키친타월·쓰레기봉투", "q": "", "p": "", "d": false}]}</script>
+</style><link id="fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&amp;family=IBM+Plex+Sans+KR:wght@400;500;600&amp;display=swap"><div id="app"></div><script type="application/json" id="state">{"title": "1박 2일 청춘여행", "sub": "10.17 (토) – 10.18 (일) · 4인", "days": [{"label": "1일차", "date": "10/17 (토)", "items": [{"t": "10:00", "w": "건우집 집합", "p": "", "m": ""}, {"t": "", "w": "장보기", "p": "", "m": ""}, {"t": "14:00", "w": "숙소 입실", "p": "", "m": ""}, {"t": "", "w": "", "p": "", "m": ""}, {"t": "", "w": "", "p": "", "m": ""}]}, {"label": "2일차", "date": "10/18 (일)", "items": []}], "games": [{"n": "손바닥 고무줄", "d": false, "p": ""}, {"n": "윷놀이", "d": false, "p": ""}, {"n": "젠가", "d": false, "p": ""}, {"n": "카메라 숨바꼭질", "d": false, "p": ""}], "menu": [{"n": "돼지고기", "p": ""}, {"n": "꽃게마요구이", "p": ""}, {"n": "", "p": "소연"}, {"n": "", "p": "나희"}], "tours": [{"n": "화담숲", "d": "곤지암 리조트 안 수목원. 10월 중순이면 단풍 시작 무렵이라 산책 코스로 좋고, 모노레일도 있어요.", "tags": ["단풍 산책", "모노레일", "예약 필수"], "u": "https://map.naver.com/p/search/%ED%99%94%EB%8B%B4%EC%88%B2", "v": 0, "pk": false}, {"n": "남한산성", "d": "유네스코 세계유산 성곽 둘레길 트레킹. 내려와서 근처 백숙집에서 점심까지 한 번에 해결 가능.", "tags": ["트레킹", "역사", "점심 코스"], "u": "https://map.naver.com/p/search/%EB%82%A8%ED%95%9C%EC%82%B0%EC%84%B1", "v": 0, "pk": false}, {"n": "율봄식물원", "d": "약 1만 평 야외 식물원. 걷는 양이 적고 사진 찍기 좋은 가벼운 코스.", "tags": ["가벼운 산책", "사진", "힐링"], "u": "https://map.naver.com/p/search/%EC%9C%A8%EB%B4%84%EC%8B%9D%EB%AC%BC%EC%9B%90", "v": 0, "pk": false}, {"n": "", "d": "", "tags": "", "u": "", "v": 0, "pk": false}], "recipes": [{"n": "삼겹살·목살 그릴 구이", "p": "", "srv": "4인 · 30분", "ing": "삼겹살 1kg, 목살 600g\n통마늘 1줌, 새송이·양파\n쌈채소(상추·깻잎), 쌈장·기름장\n파절이(대파+고춧가루·식초·설탕·참기름)", "st": "1. 고기는 굽기 30분 전 냉장고에서 꺼내두기\n2. 숯/그릴 충분히 달군 뒤 목살 먼저, 삼겹살은 나중에\n3. 한 면에서 육즙 올라오면 한 번만 뒤집기\n4. 기름 나오면 마늘·버섯·양파 같이 굽기\n5. 파절이는 먹기 직전에 무치기", "tip": "목살은 두껍게(2cm) 사야 숯불에서 안 질겨요."}, {"n": "꽃게마요구이", "p": "", "srv": "4인 · 25분", "ing": "손질 꽃게 4마리\n마요네즈 6큰술, 체다/모짜렐라 치즈 1컵\n다진마늘 1큰술, 설탕 1큰술, 쯔유 1큰술\n쪽파, 날치알(선택)", "st": "1. 꽃게 반 갈라 집게발 두드려 금 내기\n2. 마요+마늘+설탕+쯔유 섞어 소스 만들기\n3. 게딱지·단면에 소스 듬뿍 바르고 치즈 올리기\n4. 그릴 뚜껑 덮고(또는 에어프라이어 200℃) 12~15분\n5. 쪽파·날치알 뿌려 마무리", "tip": "냉동 손질 꽃게면 전날 냉장 해동. 은박 접시 위에 구우면 소스가 안 흘러요."}, {"n": "둘째 날 아침 해장라면", "p": "", "srv": "4인 · 15분", "ing": "라면 4~5봉\n남은 고기·대파, 계란 4개\n콩나물 1봉, 청양고추 1개", "st": "1. 물 끓으면 콩나물 먼저 3분\n2. 라면·스프·남은 고기 넣기\n3. 1분 남기고 계란·대파·청양고추\n4. 뚜껑 덮고 30초 뜸", "tip": "남은 꽃게 있으면 넣어서 꽃게라면으로."}], "shop": [{"c": "고기·해산물", "n": "삼겹살", "q": "1kg", "p": "", "d": false}, {"c": "고기·해산물", "n": "목살 (두껍게)", "q": "600g", "p": "", "d": false}, {"c": "고기·해산물", "n": "손질 꽃게", "q": "4마리", "p": "", "d": false}, {"c": "채소·쌈", "n": "상추·깻잎", "q": "각 1봉", "p": "", "d": false}, {"c": "채소·쌈", "n": "대파", "q": "1단", "p": "", "d": false}, {"c": "채소·쌈", "n": "통마늘·새송이·양파", "q": "적당히", "p": "", "d": false}, {"c": "채소·쌈", "n": "쪽파·청양고추", "q": "조금", "p": "", "d": false}, {"c": "채소·쌈", "n": "콩나물", "q": "1봉", "p": "", "d": false}, {"c": "양념·소스", "n": "쌈장·소금·참기름", "q": "", "p": "", "d": false}, {"c": "양념·소스", "n": "마요네즈", "q": "1통", "p": "", "d": false}, {"c": "양념·소스", "n": "모짜렐라/체다 치즈", "q": "1봉", "p": "", "d": false}, {"c": "양념·소스", "n": "쯔유·다진마늘·설탕", "q": "소량", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "소주·맥주", "q": "취향껏", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "탄산음료·생수", "q": "2L×4", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "과자·안주", "q": "", "p": "", "d": false}, {"c": "간식·음료·주류", "n": "얼음", "q": "1봉", "p": "", "d": false}, {"c": "아침거리", "n": "라면", "q": "5봉", "p": "", "d": false}, {"c": "아침거리", "n": "계란", "q": "10구", "p": "", "d": false}, {"c": "아침거리", "n": "햇반", "q": "4개", "p": "", "d": false}, {"c": "생활용품", "n": "숯·토치·착화제", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "호일·은박접시·집게·가위", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "종이컵·접시·나무젓가락", "q": "", "p": "", "d": false}, {"c": "생활용품", "n": "물티슈·키친타월·쓰레기봉투", "q": "", "p": "", "d": false}], "exp": [], "settled": {}}</script>
 <script>window.DB_URL="https://dddd-12e66-default-rtdb.asia-southeast1.firebasedatabase.app/stay";</script>
 <script id="main">
 (function(){
 var S0=JSON.parse(document.getElementById('state').textContent);
-var S=JSON.parse(JSON.stringify(S0));
+var S=JSON.parse(JSON.stringify(S0));if(!S.exp)S.exp=[];if(!S.settled)S.settled={};
 var app=document.getElementById('app');
 var PEOPLE=['훈','나희','소연','건우','다같이'];
 var PC={'훈':'p1','나희':'p2','소연':'p3','건우':'p4','다같이':'p5'};
 var TRIP=new Date(2026,9,17);
 var DB=window.DB_URL,live=!!DB,R=null,pending=false,statusTxt='연결 중…',statusKind='';
 function ls(k,v){try{if(v===undefined)return localStorage.getItem('stay.'+k);localStorage.setItem('stay.'+k,v);}catch(e){return null;}}
-var tab=ls('tab')||'sched',dayTab=+(ls('day')||0);var TABS=[['sched','📅','일정'],['fun','🎲','오락·메뉴'],['recipe','🍳','레시피'],['shop','🛒','장보기'],['tour','📍','관광']];
+var tab=ls('tab')||'sched',dayTab=+(ls('day')||0);var TABS=[['sched','📅','일정'],['fun','🎲','오락·메뉴'],['recipe','🍳','레시피'],['shop','🛒','장보기'],['tour','📍','관광'],['exp','💸','경비']];
 var openMemo={},circle=ls('circle')==='1';var me=ls('me')||'',mineOnly=ls('mineOnly')==='1',shopMode=false,undo=null,toastTimer=null,drag=null;
 var SLOTS=[''];
 (function(){for(var h=6;h<24;h++){var hh=(h<10?'0':'')+h;SLOTS.push(hh+':00',hh+':30');}['00:00','00:30','01:00','01:30','02:00'].forEach(function(s){SLOTS.push(s);});})();
@@ -288,6 +327,52 @@ function closeMenu(){menuEl.hidden=true;menuKey=null;if(pending&&!busy()){pendin
 menuEl.addEventListener('click',function(e){var b=e.target.closest('[data-v]');if(!b||!menuKey)return;var v=b.getAttribute('data-v').replace(/ \(확정\)$/,''),k=menuKey;setPath(k,v);put(k,v);closeMenu();render();});
 document.addEventListener('pointerdown',function(e){if(!menuEl.hidden&&!menuEl.contains(e.target)&&!e.target.closest('[data-a=pickW]'))closeMenu();},true);
 window.addEventListener('scroll',function(){if(!menuEl.hidden)closeMenu();},{passive:true});
+var MEM=['훈','나희','소연','건우'],CATS=['장보기','숙소','교통','식비','기타'];
+function won(n){return (n<0?'-':'')+Math.abs(Math.round(n)).toLocaleString('ko-KR')+'원';}
+function short(n){return n>=10000?(Math.round(n/1000)/10).toString().replace(/\.0$/,'')+'만':n?n.toLocaleString('ko-KR'):'';}
+function exParts(x){var ex=String(x.x||'').split(',').filter(Boolean);return MEM.filter(function(m){return ex.indexOf(m)<0;});}
+function settle(){var paid={},owe={},cat={},tot=0;MEM.forEach(function(m){paid[m]=0;owe[m]=0;});
+  S.exp.forEach(function(x){var A=Math.max(0,Math.round(+x.amt||0));if(!A)return;var P=exParts(x);if(!P.length)P=MEM.slice();
+    tot+=A;cat[x.c||'기타']=(cat[x.c||'기타']||0)+A;if(x.p&&paid[x.p]!=null)paid[x.p]+=A;else{paid['?']=(paid['?']||0)+A;}
+    var n=P.length,sh=Math.floor(A/n),r=A-sh*n;P.forEach(function(m){owe[m]+=sh;});
+    if(r){var order=P.indexOf(x.p)>=0?[x.p].concat(P.filter(function(m){return m!==x.p;})):P;for(var i=0;i<r;i++)owe[order[i%order.length]]+=1;}});
+  var bal={};MEM.forEach(function(m){bal[m]=paid[m]-owe[m];});
+  var cr=MEM.filter(function(m){return bal[m]>0;}).map(function(m){return {m:m,v:bal[m]};}),db=MEM.filter(function(m){return bal[m]<0;}).map(function(m){return {m:m,v:-bal[m]};}),tr=[];
+  if(!paid['?']){while(cr.length&&db.length){cr.sort(function(a,b){return b.v-a.v;});db.sort(function(a,b){return b.v-a.v;});
+    var c=cr[0],d=db[0],v=Math.min(c.v,d.v);tr.push({f:d.m,t:c.m,v:v});c.v-=v;d.v-=v;if(!c.v)cr.shift();if(!d.v)db.shift();}}
+  return {paid:paid,owe:owe,bal:bal,cat:cat,tot:tot,tr:tr,unk:paid['?']||0};}
+function expTab(){var R=settle(),h='';
+  h+='<section><div class="h2row"><h2>경비 <small>지출을 적으면 정산이 바로 계산돼요</small></h2></div>';
+  h+='<div class="exsum"><div class="stat"><b>'+won(R.tot)+'</b><span>총 지출 · '+S.exp.filter(function(x){return +x.amt;}).length+'건</span></div><div class="stat"><b>'+won(Math.round(R.tot/MEM.length))+'</b><span>1인 평균</span></div></div>';
+  // list
+  h+='<div class="panel">';
+  if(!S.exp.length)h+='<div class="empty">아직 지출이 없어요. 아래 버튼으로 추가하세요.</div>';
+  S.exp.forEach(function(x,i){var P=exParts(x),k='exp.'+i;
+    h+='<div class="ex'+mc(x.p)+'"><div class="ex1">'+inp('e'+i+'-n',k+'.n',x.n,'en','어디에 썼나요')
+      +'<input type="text" inputmode="numeric" class="amt" id="e'+i+'-a" data-k="'+k+'.amt" value="'+(+x.amt?(+x.amt).toLocaleString('ko-KR'):'')+'" placeholder="금액">'
+      +payerSel(k+'.p',x.p)+'<button class="x" data-a="del" data-p="exp" data-i="'+i+'" aria-label="삭제">×</button></div>'
+      +'<div class="ex2"><select class="cat" data-k="'+k+'.c">'+CATS.map(function(c){return '<option'+((x.c||'기타')===c?' selected':'')+'>'+c+'</option>';}).join('')+'</select><span class="lbl2">나눌 사람</span>'
+      +MEM.map(function(m){var on=P.indexOf(m)>=0;return '<button class="pc '+(on?'on '+PC[m]:'')+'" data-a="exTog" data-i="'+i+'" data-v="'+m+'" aria-pressed="'+on+'">'+m+'</button>';}).join('')
+      +(+x.amt&&P.length?'<span class="each">1인 '+won(Math.floor(+x.amt/P.length))+'</span>':'')+'</div></div>';});
+  h+='<button class="add" data-a="addExp">+ 지출 추가</button></div></section>';
+  // settlement
+  h+='<section><div class="h2row"><h2>정산 <small>누가 누구에게 얼마</small></h2>'+(R.tr.length?'<button class="chip" data-a="copySettle">📋 복사</button>':'')+'</div><div class="panel">';
+  if(R.unk)h+='<div class="empty warn">결제한 사람이 비어 있는 지출('+won(R.unk)+')이 있어요. 채우면 정산이 계산돼요.</div>';
+  else if(!R.tr.length)h+='<div class="empty">'+(R.tot?'모두 딱 맞아요. 보낼 돈이 없어요 🎉':'지출을 추가하면 계산돼요.')+'</div>';
+  R.tr.forEach(function(t){var key=t.f+'>'+t.t+'>'+t.v,done=!!S.settled[key];
+    h+='<div class="tr'+(done?' done':'')+(mine(t.f)||mine(t.t)?' mine':'')+'"><button class="chk'+(done?' on':'')+'" data-a="settle" data-v="'+esc(key)+'" aria-label="보냄 표시">'+(done?'✓':'')+'</button><span class="who '+PC[t.f]+' tag">'+t.f+'</span><span class="arr">→</span><span class="who '+PC[t.t]+' tag">'+t.t+'</span><b>'+won(t.v)+'</b><span class="st">'+(done?'보냄':'')+'</span></div>';});
+  h+='</div></section>';
+  // per person
+  h+='<section><h2>사람별 <small>낸 돈 − 부담할 돈</small></h2><div class="panel"><div class="pp head"><span></span><span>낸 돈</span><span>부담</span><span>차액</span></div>';
+  MEM.forEach(function(m){var b=R.bal[m];h+='<div class="pp'+mc(m)+'"><span class="who '+PC[m]+' tag">'+m+'</span><span>'+won(R.paid[m])+'</span><span>'+won(R.owe[m])+'</span><span class="'+(b>0?'pos':b<0?'neg':'')+'">'+(b>0?'+':'')+won(b)+'<small>'+(b>0?'받을 돈':b<0?'보낼 돈':'')+'</small></span></div>';});
+  var mx=Math.max.apply(null,MEM.map(function(m){return R.paid[m];}).concat([1]));
+  h+='<div class="bars">'+MEM.map(function(m){return '<div class="brow"><span>'+m+'</span><div class="btrack"><i class="'+PC[m]+'" style="width:'+(R.paid[m]/mx*100)+'%"></i></div></div>';}).join('')+'</div></div></section>';
+  // categories
+  var cs=CATS.filter(function(c){return R.cat[c];});
+  if(cs.length){h+='<section><h2>분류별</h2><div class="panel bars">';cs.forEach(function(c){var v=R.cat[c];h+='<div class="brow c"><span>'+c+'</span><div class="btrack"><i style="width:'+(v/R.tot*100)+'%"></i></div><em>'+won(v)+' · '+Math.round(v/R.tot*100)+'%</em></div>';});h+='</div></section>';}
+  return h;}
+function payerSel(key,val){var o='<select class="who payer '+(PC[val]||'p0')+'" data-k="'+key+'" aria-label="결제한 사람"><option value="">누가 냄?</option>';MEM.forEach(function(p){o+='<option'+(p===val?' selected':'')+'>'+p+'</option>';});return o+'</select>';}
+function settleText(){var R=settle();return '[1박 2일 청춘여행 정산]\n총 '+won(R.tot)+' · 1인 평균 '+won(Math.round(R.tot/MEM.length))+'\n'+R.tr.map(function(t){return t.f+' → '+t.t+' '+won(t.v);}).join('\n');}
 function newP(){return mineOnly&&me?me:'';}
 
 function segs(di){var d=S.days[di],out=[];
@@ -417,9 +502,9 @@ function render(){
   });
   h+='<button class="tour-add" data-a="addTour">+ 후보 추가</button></div><p class="note">숙소에서의 거리·운영시간·예약 여부는 지도 링크에서 한 번 더 확인하세요.</p></section>';
   var Ht=h;
-  var cnt={sched:'',fun:'',recipe:'',shop:sd+'/'+st,tour:pk?'확정':''};
+  var etot=S.exp.reduce(function(a,x){return a+(+x.amt||0);},0);var cnt={sched:'',fun:'',recipe:'',shop:sd+'/'+st,tour:pk?'확정':'',exp:short(etot)};
   var tb='<nav class="tabs" role="tablist">';TABS.forEach(function(t){tb+='<button role="tab" aria-selected="'+(tab===t[0])+'" class="tab'+(tab===t[0]?' on':'')+'" data-a="tab" data-v="'+t[0]+'"><i>'+t[1]+'</i><span>'+t[2]+'</span>'+(cnt[t[0]]?'<em>'+esc(cnt[t[0]])+'</em>':'')+'</button>';});tb+='</nav>';
-  var body={sched:Hs,fun:Hf,recipe:Hr,shop:Hp,tour:Ht}[tab]||Hs;
+  var body=tab==='exp'?expTab():({sched:Hs,fun:Hf,recipe:Hr,shop:Hp,tour:Ht}[tab]||Hs);
   app.innerHTML=H0+tb+'<div class="tabbody">'+body+'</div></div>';
 }
 
@@ -428,7 +513,7 @@ function arr(v){if(Array.isArray(v))return v.filter(function(x){return x!=null;}
 function norm(d){d=d||{};var o={};o.title=d.title||S0.title;o.tpl=d.tpl||0;o.sub=d.sub||S0.sub;
   o.days=arr(d.days).map(function(x){return {label:x.label||'',date:x.date||'',items:arr(x.items).map(function(y){return {t:y.t||'',w:y.w||'',p:y.p||'',m:y.m||''};})};});
   if(!o.days.length)o.days=JSON.parse(JSON.stringify(S0.days));
-  ['games','menu','tours','recipes','shop'].forEach(function(k){o[k]=arr(d[k]);});return o;}
+  ['games','menu','tours','recipes','shop','exp'].forEach(function(k){o[k]=arr(d[k]);});o.settled=(d.settled&&typeof d.settled==='object')?d.settled:{};return o;}
 function busy(){if(drag||menuKey)return true;var a=document.activeElement;return a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)&&app.contains(a);}
 function apply(v){S=norm(v);if(busy()){pending=true;return;}render();}
 function setStatus(t,k){statusTxt=t;statusKind=k||'';var el=document.getElementById('status');if(el){el.textContent=t;el.className='status '+statusKind;}}
@@ -448,7 +533,9 @@ function showToast(txt,canUndo){clearTimeout(toastTimer);toast.innerHTML='<span>
 toast.addEventListener('click',function(e){if(!e.target.closest('[data-u]')||!undo)return;getPath(undo.p).splice(undo.i,0,undo.it);putCol(undo.p);undo=null;toast.hidden=true;render();});
 
 // ---------- edits ----------
-app.addEventListener('change',function(e){var k=e.target.getAttribute('data-k');if(!k)return;var v=e.target.value;setPath(k,v);
+app.addEventListener('change',function(e){var k=e.target.getAttribute('data-k');if(!k)return;var v=e.target.value;
+  if(/^exp\.\d+\.amt$/.test(k)){var nv=parseInt(String(v).replace(/[^\d]/g,''),10)||0;setPath(k,nv);put(k,nv);render();return;}
+  setPath(k,v);if(/^exp\./.test(k)){put(k,v);render();return;}
   var m=k.match(/^days\.(\d+)\.items\.(\d+)\.t$/);
   if(m){var its=S.days[+m[1]].items,it=its.splice(+m[2],1)[0],j=-1;
     if(v){for(var x=0;x<its.length;x++){if(its[x].t&&ord(its[x].t)>ord(v)){j=x;break;}}
@@ -465,6 +552,11 @@ app.addEventListener('click',function(e){
   var b=e.target.closest('[data-a]');if(!b||b.disabled)return;
   var a=b.getAttribute('data-a'),i=+b.getAttribute('data-i'),d=+b.getAttribute('data-d'),col=null;
   if(a==='pickW'){if(!menuEl.hidden&&menuKey===b.getAttribute('data-k'))closeMenu();else openMenu(b,b.getAttribute('data-k'));return;}
+  if(a==='addExp'){S.exp.push({n:'',amt:0,p:me||'',c:'기타',x:''});render();put('exp',S.exp);var en=document.getElementById('e'+(S.exp.length-1)+'-n');if(en)en.focus();return;}
+  if(a==='exTog'){var ex=S.exp[i],P=exParts(ex),m=b.getAttribute('data-v'),ix=P.indexOf(m);if(ix>=0){if(P.length===1){showToast('최소 1명은 있어야 해요');return;}P.splice(ix,1);}else P.push(m);
+    ex.x=MEM.filter(function(q){return P.indexOf(q)<0;}).join(',');render();put('exp.'+i+'.x',ex.x);return;}
+  if(a==='settle'){var sk=b.getAttribute('data-v');if(S.settled[sk])delete S.settled[sk];else S.settled[sk]=true;render();put('settled',S.settled);return;}
+  if(a==='copySettle'){var txt=settleText();(navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){showToast('정산 내역을 복사했어요');},function(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('정산 내역을 복사했어요');}catch(z){showToast('복사 실패');}ta.remove();});return;}
   if(a==='tab'){var nv=b.getAttribute('data-v');if(nv!==tab){tab=nv;ls('tab',tab);if(!menuEl.hidden)closeMenu();render();var tn=document.querySelector('.tabs');if(tn&&tn.getBoundingClientRect().top<0)tn.scrollIntoView();}return;}
   if(a==='day'){dayTab=+b.getAttribute('data-day');ls('day',dayTab);render();return;}
   if(a==='circle'){circle=!circle;ls('circle',circle?'1':'0');render();return;}
